@@ -22,6 +22,14 @@ header{
     width: 264px;
     height: 419px;
     background-image: url(./assets/bg-ignite.svg);
+    cursor: pointer;
+
+    opacity: 0;
+    transform: translateY(-100px);
+    animation:appear .4s forwards;
+
+    user-select: none;
+    -webkit-user-select:none;
 }
 .card > img {
     width:150px;
@@ -50,4 +58,11 @@ header{
 .info p {
     font-size:14px;
     line-height:160%;
+}
+
+@keyframes appear {
+    to{
+        opacity:1;
+        transform: translateY(0px);
+    }
 }
